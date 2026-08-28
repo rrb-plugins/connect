@@ -1,0 +1,1 @@
+PLUGIN[:connect] = Hash.new

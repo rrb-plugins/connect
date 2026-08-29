@@ -3,15 +3,15 @@
 Gem::Specification.new do |s|
   s.name = 'connect'
   s.version = '0.0.1'
-  s.licenses = ['Unlicense']
+  s.license = 'MIT'
   s.summary = 'Short documentation of connect.'
-  s.description =  <<-EOF
+  s.description = <<-EOF
                        A longer documentation in
                        several lines.
-                   EOF
-  s.authors = ['']
-  s.email = ['rassaur@gmail.com']
+  EOF
+  s.authors = ['Robert Rassau']
+  s.email = ['rassaur@yahoo.de']
   s.files = ['lib/example.rb']
-  s.homepage = 'https://rubygems.org/gems/example'
-  s.metadata = { 'source_code_uri' => 'https://github.com/example/example' }
+  s.homepage = 'https://github.com/rrb-plugins/connect'
+  s.metadata = { 'source_code_uri' => 'https://github.com/rrb-plugins/connect' }
 end

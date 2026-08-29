@@ -1,0 +1,5 @@
+extension:
+  name: "connect"
+  type: "plugin"
+  target_path: "extensions/plugins/connect"
+  version: "0.0.1"

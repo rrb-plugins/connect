@@ -149,20 +149,16 @@ class CreatePluginPlConnectConnect202608281915 < ActiveRecord::Migration[8.1]
       # --- ----------- ---
 
       begin
-        if LinkItem.exists?(name: "link_nav_#{model.underscore}")
-          link_item = LinkItem.find_by(name: "link_nav_#{model.underscore}")
+        if LinkItem.exists?(name: "group_nav_#{model.underscore}")
+          link_item = LinkItem.find_by(name: "group_nav_#{model.underscore}")
         else
           parent_item = LinkItem.find_by(uuid: 'b4002f65-3863-4266-8a8f-aea6291b62b9--link_item--20180307000000')
           count = parent_item.children.count * 10
-
-        
-          link_controller_name = "pl_connect/#{model.underscore.gsub('pl_connect_', '')}"
-        
-
-          link_item = LinkItem.create(parent_id: parent_item.id, parent_uuid: parent_item.uuid, name: "link_nav_#{model.underscore}", decimal_position: count,
+       
+          link_item = LinkItem.create(parent_id: parent_item.id, parent_uuid: parent_item.uuid, name: "group_nav_#{model.underscore}", decimal_position: count,
             creator_id: user_id, updater_id: user_id, creator_uuid: user_uuid, updater_uuid: user_uuid, save_info: '{"type":"create","history":{},"fields":{}}',
-            f_type: 'link', controller_name: link_controller_name, action_name: 'list_element',
-            title:, description: I18n.t('fields.link_items.description', title:), include_search_link: true, uuid: '57263a6c-0189-4481-96a9-762631839650--link_item--20260828211521',
+            f_type: 'group',  title:, description: I18n.t('fields.link_items.group_description', title:), 
+            uuid: '57263a6c-0189-4481-96a9-762631839650--link_item--20260828211521',
             tenant_id:, tenant_uuid:, extension_item_id: extension_item.id, extension_item_uuid: extension_item.uuid)
         end
 
